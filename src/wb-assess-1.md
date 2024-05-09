@@ -210,7 +210,7 @@ outputArgs('hi', 'bye');
   of the expected output.
 - [ ] **C.** The code causes an error because the `a`, `b`, and `c` variables haven't been
   initialized.
-- [ ] **D.** There is no error; the code generates the expected output.
+- [x] **D.** There is no error; the code generates the expected output.
 
 ## B. Free response
 
@@ -225,13 +225,13 @@ Functions can be used to create named blocks of code that can be executed/reused
 **_What is the difference between `console.log` and `return`?_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+console.log() will print its data onto the console, while return will return the function; which does not ensure its release onto the console.
 ```
 
 **_What's the difference between defining and calling a function?_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+Defining a function is creating what it will do, such as let example = (a) => {a++}; will return a + 1;. Calling a function is mentioning it on a line of code that if x happens, let example (a++) happen.
 ```
 
 ### B.2. Describe these data types.
@@ -241,25 +241,25 @@ Write a short description of the following data types:
 **_String_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+A string is a line of code that is held in quotations ("") that displays data as a text, which can contain numbers, letters, or code, and is printed as is.
 ```
 
 **_Number_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+A number/integer is a value between 0-9 that can be used for mathmatical equations. Such as the value of how many grapes are in a container; ie: let grapesLeft = 10
 ```
 
 **_Boolean_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+A boolean is a data type that will output true or false depending on the results.
 ```
 
 **_Array_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+An array is a table of data with an index that starts at zero, accepting only strings; which can be created with: let array = ['cool', 'cooler', and 'epic']. 
 ```
 
 ### B.3. Trace the value of `x`
@@ -282,7 +282,7 @@ completed for you.
 
 ```
 Initial values: y = 0, x = 5
-1:              y = 1, x = ??
-2:              y = 2, x = ??
-3:              y = 3, x = ??
+1:              y = 1, x = 10
+2:              y = 2, x = 15
+3:              y = 3, x = 20
 ```
