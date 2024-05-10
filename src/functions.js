@@ -52,16 +52,28 @@ function generateSentence(person, beverage, location) {
 // Ex.:
 //   censorVowels('javascript');
 //   => 'j*v*scr*pt'
-function censorVowels(string) {
-  let vowels = ("a", "e","i", "o", "u")
-  return string.replace(vowels, `*`)
+function censorVowels(str) {
+  return string.replace(/[aeiouAEIOU]/g, '*');
 }
+
 
 // Return the given string in sticky case.
 // Ex.:
 //   stickyCase('hello world');
 //   => 'hElLo wOrLd'
-function stickyCase(string) {}
+function stickyCase(string) {
+  let sticky = '';
+  for (let i = 0; i < string.length; i++) {
+    if (i % 2 === 0) {
+        sticky += string[i].toLowerCase();
+      } else {
+          sticky += string[i].toUpperCase();
+        }
+    }
+    return sticky;
+}
+
+
 
 // Return the given string in leetspeak. Leetspeak is a modified version of
 // English where characters are replaced by numbers or symbols. For this
