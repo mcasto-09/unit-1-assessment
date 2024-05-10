@@ -3,9 +3,8 @@
 //   divide(10, 2);
 //   => 5
 function divide(x, y) {
-  return x/y;
+  return (x / y);
 }
-console.log(divide(x,y))
 // Return the average of x and y.
 // Here, the average of x and y is the *mean* of x and y. In other words, it's
 // computed by dividing the sum of x and y by 2.
@@ -16,8 +15,6 @@ function average(x, y) {
     let z = (x + y)
     return z / 2
   }
-  
-  console.log(average(x,y)) 
 
 // Return true if x and y are mostly equivalent up to a tolerance of 0.001.
 // In other words, return true if the aboslute value of x - y is less than 0.001.
@@ -45,15 +42,15 @@ function fullName(firstName, lastName) {
 //   generateSentence('Kay', 'coffee', 'the local cafe');
 //   => 'Kay was drinking coffee at the local cafe.'
 function generateSentence(person, beverage, location) {
-  return `${person} was drinking ${beverage} at ${location}`
+  return (`${person} was drinking ${beverage} at ${location}.`);
 }
 
 // Return the given string with all vowels replced with '*' characters.
 // Ex.:
 //   censorVowels('javascript');
 //   => 'j*v*scr*pt'
-function censorVowels(str) {
-  return string.replace(/[aeiouAEIOU]/g, '*');
+function censorVowels(string) {
+  return string.replace(/[aeiou]/gi, '*');
 }
 
 
@@ -67,13 +64,11 @@ function stickyCase(string) {
     if (i % 2 === 0) {
         sticky += string[i].toLowerCase();
       } else {
-          sticky += string[i].toUpperCase();
+        sticky += string[i].toUpperCase();
         }
     }
     return sticky;
 }
-
-
 
 // Return the given string in leetspeak. Leetspeak is a modified version of
 // English where characters are replaced by numbers or symbols. For this
@@ -87,7 +82,24 @@ function stickyCase(string) {
 // Ex.:
 //   leetspeak('javascript');
 //   => 'j4v45cr1p7'
-function leetspeak(string) {}
+function leetspeak(string) {
+  for(let letter of string) {
+      if (letter == 'a'){
+        string = string.replace('a', '4');
+      }else if (letter === 'e') {
+        string = string.replace('e', '3');
+      }else if (letter === 'i'){
+        string = string.replace('i', '1');
+      }else if (letter ==='o'){
+        string = string.replace('o', '0');
+      }else if (letter === 's'){
+        string = string.replace('s', '5');
+      }else if (letter ==='t'){
+        string = string.replace('t', '7');
+    }
+  }
+  return string;
+}
 
 export {
   approximatelyEqual,
