@@ -2,32 +2,65 @@
 // Ex.:
 //   greaterThanTen([1, 2, 3, 11, 12, 13]);
 //   => [11, 12, 13]
-function greaterThanTen(numbers) {}
+function greaterThanTen(numbers) {
+  let arr = [];
+  for (let numbs of numbers) {
+    if (numbs > 10) {
+      arr.push(numbs);
+    }
+  } return arr;
+}
 
 // Given an array of strings, return all words that start with 'b' or 'B'.
 // Ex.:
 //   bWords(['banana', 'orange', 'apple', 'Bonobo', 'kiwi', 'pear']);
 //   => ['banana', 'Bonobo]
-function bWords(words) {}
+function bWords(words) {
+  let arr = [];
+  for (let word of words) {
+    if (word.toUpperCase.startsWith("B")) {
+      arr.push(word);
+    }
+  } return arr;
+} 
 
 // Add all the elements from additionalItems to the end of originalArray.
 // Return the originalArray..
 // Ex.:
 //  extend([1, 2, 3], [4, 5, 6]);
 //  => [1, 2, 3, 4, 5, 6]
-function extend(originalArray, additionalItems) {}
+function extend(originalArray, additionalItems) {
+  for (let item of additionalItems) {
+    originalArray.push(item);
+  } return originalArray;
+}
 
 // Return an array of all items with the given length.
 // Ex.:
 //   itemsWithLength(['a', 'bbb', 'cccc', 'dddddd', 'eee'], 3);
 //   => ['bbb', 'eee']
-function itemsWithLength(items, length) {}
+function itemsWithLength(items, length) {
+   const arrLength = [];
+   for (let i = 0; i < items.length; i++) {
+       if (items[i].length === length) {
+           arrLength.push(items[i]);
+       }
+   }
+
+   return arrLength;
+}
 
 // Return an array with every other element from the input array (start with index 0).
 // Ex.:
 //   everyOtherItem(['a', 'b', 'c', 'd', 'e']);
 //   => ['a', 'c', 'e']
-function everyOtherItem(items) {}
+function everyOtherItem(items) {
+  const arrOther = [];
+  for (let i = 0; i < items.length; i += 2) {
+      arrOther.push(items[i]);
+  } return arrOther;
+}
+
 
 // Given a list of words and a letter, return the indexes of the words that
 // start with that letter. You can assume that the words and letter will always
@@ -35,7 +68,14 @@ function everyOtherItem(items) {}
 // Ex.:
 //   findWordsStartingWith(['apple', 'banana', 'kiwi', 'pear', 'bacon'], 'b');
 //   => [1, 4]
-function findWordsStartingWith(words, letter) {}
+function findWordsStartingWith(words, letter) {
+    let startingWith = [];
+    for (let i = 0; i < words.length; i++) {
+        if (words[i][0] === letter) {
+            startingWith.push(i);
+        }
+    }
+}
 
 // Return the `n` smallest values in the array in descending order (largest
 // numbers first). Assume that `n` will always be less than the length of the
